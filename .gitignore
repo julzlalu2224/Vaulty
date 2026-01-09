@@ -1,0 +1,60 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Dependencies
+vendor/
+node_modules/
+
+# Storage
+storage/uploads/*
+storage/logs/*
+!storage/uploads/.gitkeep
+!storage/logs/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+.docker/
+data/
+
+# Composer
+composer.phar
+composer.lock
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+.tmp/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Security
+*.key
+*.pem
+*.crt
+*.csr
+
+# Database dumps
+*.sql
+*.dump
+
+# Backup files
+*.bak
+*.backup

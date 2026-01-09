@@ -1,0 +1,25 @@
+{
+    "name": "vaulty/vaulty",
+    "description": "Lightweight self-hosted file storage and management API",
+    "type": "project",
+    "require": {
+        "php": ">=8.3",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "firebase/php-jwt": "^6.10",
+        "guzzlehttp/guzzle": "^7.8",
+        "monolog/monolog": "^3.5",
+        "ramsey/uuid": "^4.7",
+        "symfony/dotenv": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vaulty\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public"
+    }
+}

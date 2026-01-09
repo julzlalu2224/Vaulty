@@ -1,0 +1,17 @@
+# Disable directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "\.(env|sql|db|config|ini)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect storage directory
+RedirectMatch 404 ^/storage/(?!uploads/)
+
+# API routing
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
